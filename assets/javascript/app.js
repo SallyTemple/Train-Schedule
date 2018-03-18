@@ -14,27 +14,26 @@
 
   var trainName= "";
   var destination= "";
-  var firstTrainTime= "";
-  var frequency= "";
+  var firstTrainTime= 0;
+  var frequency= 0;
   
   
   // get info from form
-  $("#submitButton").on("click", function (event) {
-      // Preventing the buttons default behavior when clicked (which is submitting a form)
+  $("#submitButton").on("click", function(event) {
       event.preventDefault();
-      // This line grabs the input from the textbox
-      name = $("#trainName").val().trim();
-      date = $("#destination").val().trim();
-      role = $("firstTrainTime").val().trim();
-      rate = $("#frequency").val().trim();
+      
+      trainName = $("#trainName").val().trim();
+      destination = $("#destination").val().trim();
+      firstTrainTime = $("firstTrainTime").val().trim();
+      frequency = $("#frequency").val().trim();
   
-      database = usersRef.push({
+     
+  var newTrainSchedule = {
+      trainName : trainName,
+      destination : destination,
+      firstTrainTime: firstTrainTime,
+      frequency : frequency
   
-          name : trainName,
-          date : destination,
-          role : firstTrainTime,
-          rate : frequency
-  
-      })
-  });
-  
+      }
+      database.ref().push(newTrainSchedule);
+});
