@@ -1,7 +1,4 @@
 
-
-<script>
-  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCPNwSyaGeIqBSCirWVWg_v5I3tUuTWWzY",
     authDomain: "train-schedule-6eb48.firebaseapp.com",
@@ -11,4 +8,3 @@
     messagingSenderId: "699923413540"
   };
   firebase.initializeApp(config);
-</script>

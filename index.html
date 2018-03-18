@@ -8,102 +8,122 @@
       <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous">
-
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
-            <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.js"></script>
+
 </head>
 
 <body>
       <div id="container">
-            <img src="assets/images/Train.PNG" alt="Train" style="width:100%;">
-            <div id="bottom-left"></div>
-            <div id="top-left"></div>
-            <div id="top-right">hello</div>
-            <div id="bottom-right"></div>
+            <img src="assets/images/Train.PNG" alt="Train" style="width:100%; height:100%;">
+
             <div id="centered">
-                        <div class="jumbotron jumbotron-fluid">
-                                    <div class="container">
-                                          <h1 class="display-4">Train Schedule</h1>
+                  <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                              <h1 class="display-4">Train Schedule</h1>
+                        </div>
+                        <strong>
+                              <table class="table table-bordered">
+                                    <thead>
+                                          <tr>
+                                                <th scope="col">Train Name</th>
+                                                <th scope="col">Destination</th>
+                                                <th scope="col">Frequency(min)</th>
+                                                <th scope="col">Next Arrival</th>
+                                                <th scope="col">Minutes Away</th>
+                                          </tr>
+                                    </thead>
+                                    <tbody>
+                                          <tr>
+                                                <th scope="row">Daytona Express</th>
+                                                <td>Daytona Beach, Florida</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+
+                                          </tr>
+                                          <tr>
+                                                <th scope="row">Lava Flow</th>
+                                                <td>Honolulu, HI </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+
+                                          </tr>
+                                          <tr>
+                                                <th scope="row">WestWind Zipper</th>
+                                                <td>Los Angles, California</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                          </tr>
+                                          <tr>
+                                                <th scope="row">Treasure Island</th>
+                                                <td>Orlando, Florida</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                          </tr>
+                                          <tr>
+                                                <th scope="row">Mountain Ferry</th>
+                                                <td>Great Falls, Montana</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                          </tr>
+                                          <tr>
+                                                <th scope="row">Empire State Special</th>
+                                                <td>Queens, New York</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                          </tr>
+                                          <tr>
+                                                <th scope="row">Street King</th>
+                                                <td>Houston, Texas</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                          </tr>
+                                          <tr>
+                                                <th scope="row">Sunshine Train</th>
+                                                <td>Gilbert, Arizona</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                          </tr>
+                                    </tbody>
+                              </table>
+                              <br>
+                              <form>
+                                    <div class="form-group">
+                                          <label for="exampleInputEmail1">Train Name</label>
+                                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=>
+                                          <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
-                  <strong>
-                        <table class="table table-bordered">
-                              <thead>
-                                    <tr>
-                                          <th scope="col">Train Name</th>
-                                          <th scope="col">Destination</th>
-                                          <th scope="col">Frequency(min)</th>
-                                          <th scope="col">Next Arrival</th>
-                                          <th scope="col">Minutes Away</th>
-                                    </tr>
-                              </thead>
-                              <tbody>
-                                    <tr>
-                                          <th scope="row">Daytona Express</th>
-                                          <td>Daytona Beach, Florida</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td></td>
-                                         
-                                    </tr>
-                                    <tr>
-                                          <th scope="row">Lava Flow</th>
-                                          <td>Honolulu, HI </td>
-                                          <td></td>
-                                          <td></td>
-                                          <td></td>
-                                          
-                                    </tr>
-                                    <tr>
-                                          <th scope="row">WestWind Zipper</th>
-                                          <td>Los Angles, California</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td></td>
-                                    </tr>
-                                    <tr>
-                                          <th scope="row">Treasure Island</th>
-                                          <td>Orlando, Florida</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td></td>
-                                    </tr>
-                                    <tr>
-                                          <th scope="row">Mountain Ferry</th>
-                                          <td>Great Falls, Montana</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td></td>
-                                    </tr>
-                                    <tr>
-                                          <th scope="row">Empire State Special</th>
-                                          <td>Queens, New York</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td></td>
-                                    </tr>
-                                    <tr>
-                                          <th scope="row">Street King</th>
-                                          <td>Houston, Texas</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td></td>
-                                    </tr>
-                                    <tr>
-                                          <th scope="row">Sunshine Train</th>
-                                          <td>Gilbert, Arizona</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td></td>
-                                    </tr>
-                              </tbody>
-                        </table>
-                  </strong>
-            </div>
+                                    <div class="form-group">
+                                          <label for="exampleInputPassword1">Destination</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder=>
+                                    </div>
+                                    <div class="form-group">
+                                                <label for="exampleInputPassword1">First Train Time (HH:mm- military time)</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder=>
+                                          </div>
+                                          <div class="form-group">
+                                                      <label for="exampleInputPassword1">Frequency(min)</label>
+                                                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder=>
+                                                </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                              </form>
+                        </strong>
+                  </div>
 
 
-            
-           
+
+
             </div>
 
 
