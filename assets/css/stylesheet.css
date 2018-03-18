@@ -5,7 +5,7 @@
 
 h1 {
     text-align: center;
-    color: rgba(0, 0, 255, 0.808);
+    color: rgba(0, 183, 255, 0.808);
 }
 
 #wrapper {
@@ -24,29 +24,46 @@ h1 {
 }
 
   
-  img { 
- 
-      opacity: 0.1;
-      height: 1000px; 
-      width: 1000px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-  #wrapper{
-      position:relative;
-      }
+#container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
 
-      #photo {
-      background-image: url('assets/images/Train.PNG');
-      opacity:0.1;
-      width:300px;
-      height:300px;
-      }
-      div#second{
-      width:300px;
-      height:300px;
-      position:absolute;
-      top: 0;
-      left:0;
-      }
+
+/* Bottom left text */
+#bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    }
+    
+    /* Top left text */
+    #top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    }
+    
+    /* Top right text */
+    #top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    }
+    
+    /* Bottom right text */
+    #bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    }
+    
+    /* Centered text */
+    #centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
