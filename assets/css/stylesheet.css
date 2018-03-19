@@ -38,10 +38,13 @@ h1 {
     transform: translate(50%, -5%);
     }
     
-    tr  {
+    tr{
         color: black;
     }
 
     .form-group {
+        color: black;
+    }
+    h3 {
         color: black;
     }
