@@ -11,14 +11,14 @@
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
       <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.js"></script>
+      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </head>
 
 <body>
       <div id="container">
             <img src="assets/images/Train.PNG" alt="Train" style="width:100%;">
-
+<h3>Current Time - <span id="currentTime"></span></h3>
             <div id="centered">
                   <div class="jumbotron jumbotron-fluid">
                         <div class="container">
@@ -111,7 +111,7 @@
                                           <input type="text" class="form-control" id="input2" aria-describedby="emailHelp" placeholder=>
                                     </div>
                                     <div class="form-group">
-                                                <label for="exampleInputPassword1">First Train Time (HH:mm- military time)</label>
+                                                <label for="exampleInputPassword1">First Train Time (hh:mm- military time)</label>
                                                 <input type="text" class="form-control" id="input3" aria-describedby="emailHelp" placeholder=>
                                           
                                                 <div class="form-group">
