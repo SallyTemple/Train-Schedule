@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
       var config = {
             apiKey: "AIzaSyCPNwSyaGeIqBSCirWVWg_v5I3tUuTWWzY",
             authDomain: "train-schedule-6eb48.firebaseapp.com",
@@ -58,12 +58,13 @@ $(document).ready(function () {
             var frequency = childSnapshot.val().newFrequency;
 
 
-            // Current Time
-            var currentTime = moment();
+
 
             // First Time 
             var firstTimeConverted = moment(firstTrainTime, "hh:mm").subtract(1, "years");
-
+            
+            // Current Time
+            var currentTime = moment();
 
             // Difference between the times
             var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
@@ -91,4 +92,4 @@ $(document).ready(function () {
 
       });
 
-});
+
