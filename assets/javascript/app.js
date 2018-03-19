@@ -9,13 +9,13 @@ var config = {
 };
 firebase.initializeApp(config);
 
-//This variable reference the database
+//Create a variable to reference the database
 var database = firebase.database();
 
 
 
 // Submit new train schedule information to the database
-$("#submitButton").on("click", function (event) {
+$("#submitButton").on("click", function() {
       event.preventDefault();
 
       // Create variables for the different in the colomns
@@ -27,10 +27,10 @@ $("#submitButton").on("click", function (event) {
       //Get the user input
       trainName = $("#input1").val().trim();
       destination = $("#input2").val().trim();
-      firstTrainTime = $("input3").val().trim();
-      frequency = $("input4").val().trim();
+      firstTrainTime = $("#input3").val().trim();
+      frequency = $("#input4").val().trim();
 
-      //Create variable were the form variable equal the new input
+      //Create variable to hold the train data
       var newTrainSchedule = {
             newTrainName: trainName,
             newDestination: destination,
@@ -51,7 +51,7 @@ $("#submitButton").on("click", function (event) {
 });
 
 //Adding a new train schedule in the database
-database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+database.ref().on("child_added", function(childSnapshot) {
       var trainName = childSnapshot.val().newTrainName;
       var  destination = childSnapshot.val().newDestination;
       var firstTrainTime = childSnapshot.val().newFirstTrainTime;
